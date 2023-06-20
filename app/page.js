@@ -1,95 +1,97 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
+import Card from "@/components/Card";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <main>
+      <div className={styles.hero}>
+        <div className={styles.innerBox}>
+          <div className={styles.boxContent}>
+            <h1 className={styles.headingH1}>
+              Become a Financial Advisor and
+              <span> Earn Rs. 1 Lakh/Month</span>
+            </h1>
+            <p>No investment required</p>
+            <div>
+              <Image
+                className={styles.googleplay}
+                src="googleplay.svg"
+                height="48"
+                width="162"
+                alt="googleplay"
+              ></Image>
+            </div>
+          </div>
+          <div className={styles.boxBanner}>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+              className={styles.boxImage}
+              src="/manphone.webp"
+              width="738"
+              height="350"
+              alt="manphone"
+            ></Image>
+          </div>
         </div>
       </div>
+      <div className={styles.brands}>
+        <div className={styles.hello}>
+          <div className={styles.brandHead}>
+            <p>Top Brands on ZET</p>
+            <p>We are trusted by the best brand in the company</p>
+          </div>
+          <div className={styles.brandNames}>
+            <div className={styles.logos}>
+                <img className={styles.brandImg} src="amex.webp" alt="amex" />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+                <img className={styles.brandImg} src="Aufin.webp" alt="aufin" />
+
+                <img className={styles.brandImg} src="Bajaj.webp" alt="bajaj" />
+
+                <img className={styles.brandImg} src="BOB.webp" alt="bob" />
+
+                <img className={styles.brandImg} src="YesBank.webp" alt="YesBank" />
+
+                <img className={styles.brandImg} src="StandardChartered.webp" alt="StandardChartered" />
+
+                <img className={styles.brandImg} src="Idfc.webp" alt="idfc" />
+
+                <img className={styles.brandImg} src="IndusInd.webp" alt="indusInd" />
+            </div>
+            <div className={styles.logos}>
+                <img className={styles.brandImg} src="amex.webp" alt="amex" />
+
+                <img className={styles.brandImg} src="Aufin.webp" alt="aufin" />
+
+                <img className={styles.brandImg} src="Bajaj.webp" alt="bajaj" />
+
+                <img className={styles.brandImg} src="BOB.webp" alt="bob" />
+
+                <img className={styles.brandImg} src="YesBank.webp" alt="YesBank" />
+
+                <img className={styles.brandImg} src="StandardChartered.webp" alt="StandardChartered" />
+
+                <img className={styles.brandImg} src="Idfc.webp" alt="idfc" />
+
+                <img className={styles.brandImg} src="IndusInd.webp" alt="indusInd" />
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className={styles.productsOnZet}>
+        <div>
+          <div className={styles.brandHead}>
+              <p> Products on ZET</p>
+              <p>We are trusted by best brand in the country</p>
+          </div>
+          <div className={styles.cardContainer}>
+            <Card bgColor="#edffec" productImg="CC.webp" heading="CREDIT CARDS" description="100% Contactless Application Process with Instant Approval From Top Banks." />
+            <Card bgColor="#fff1ca" productImg="Loan.webp" heading="LOANS" description="100% online process. Instant offers. Affordable Rate of Interest on loans." />
+            <Card bgColor="#ffeee7" productImg="BNPL.webp" heading="BUY NOW PAY LATER" description="Short-term financing that allows consumers to make purchases and pay for them over time." />
+            <Card bgColor="#fff5e7" productImg="AccountSave.webp" heading="SAVING ACCOUNTS" description="ZET offers range of savings account that suits your personal needs for the banking." />
+          </div>
+        </div>
       </div>
     </main>
-  )
+  );
 }
